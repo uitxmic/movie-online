@@ -7,6 +7,14 @@
     {
       "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/movie",
+      "destination": "/movie.html"
+    },
+    {
+      "source": "/watch",
+      "destination": "/watch.html"
     }
   ],
   "headers": [
