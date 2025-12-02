@@ -20,23 +20,38 @@ class MovieController {
     /**
      * Kiểm tra URL để biết đang ở trang nào
      */
+/**
+     * Check current route and load appropriate content
+     */
     checkRoute() {
         const path = window.location.pathname;
         const params = new URLSearchParams(window.location.search);
 
-        if (path.includes('movie.html')) {
-            const movieId = params.get('id');
-            if (movieId) {
-                this.loadMovieDetails(movieId);
-            }
-        } else if (path.includes('watch.html')) {
+        console.log("Current path:", path); // Debug để xem đường dẫn thực tế
+
+        // SỬA ĐỔI: Kiểm tra linh hoạt hơn (chấp nhận cả /movie và /movie.html)
+        // Dùng indexOf > -1 thay vì includes để an toàn hơn cho TV đời cũ
+        
+        // 1. Trang Xem phim (Player)
+        if (path.indexOf('/watch') !== -1 || path.indexOf('watch.html') !== -1) {
             const movieId = params.get('id');
             const episode = params.get('ep');
             if (movieId) {
                 this.loadPlayer(movieId, episode);
             }
+        } 
+        // 2. Trang Chi tiết phim
+        else if (path.indexOf('/movie') !== -1 || path.indexOf('movie.html') !== -1) {
+            const movieId = params.get('id');
+            if (movieId) {
+                this.loadMovieDetails(movieId);
+            }
         }
-        // Mặc định (index.html) sẽ do logic khác xử lý hoặc để trống
+        // 3. Trang chủ (Mặc định nếu không khớp cái nào ở trên)
+        else {
+            // Gọi hàm load trang chủ (bạn cần viết thêm hàm này nếu chưa có)
+            // this.loadHome(); 
+        }
     }
 
     /**
