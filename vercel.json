@@ -9,11 +9,11 @@
       "destination": "/index.html"
     },
     {
-      "source": "/movie",
+      "source": "/movie(.*)",
       "destination": "/movie.html"
     },
     {
-      "source": "/watch",
+      "source": "/watch(.*)",
       "destination": "/watch.html"
     }
   ],
