@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Phim Online</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Xem Phim Online</h1>
+        </header>
+
+        <main>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <a href="movie.html?id=mang-me-di-bo" tabindex="0">
+                        <img src="https://phim.nguonc.com/public/images/Film/5SiQsz5YCxZdCN5vhKdiQ2dQnr6.jpg" 
+                             alt="Mang Mẹ Đi Bỏ">
+                        <div class="movie-info">
+                            <h3>Mang Mẹ Đi Bỏ</h3>
+                            <p class="movie-meta">
+                                <span class="quality">HD</span>
+                                <span class="language">Vietsub</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Thêm các phim khác ở đây nếu muốn -->
+            </div>
+        </main>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="models/MovieModel.js"></script>
+    <script src="controllers/MovieController.js"></script>
+</body>
+</html>
