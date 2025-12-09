@@ -268,6 +268,7 @@ class MovieController {
                     <h1>${movie.name} - Tập ${currentEpName}</h1>
                     <div class="player-controls">
                         <a href="movie.html?id=${movie.slug}" class="btn-home">← Thông tin phim</a>
+                        <a href="index.html" class="btn-home">🏠 Trang chủ</a>
                     </div>
                 </div>
 
